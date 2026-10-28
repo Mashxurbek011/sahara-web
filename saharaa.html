@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahara</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #000;
+        }
+
+        header {
+            width: 100%;
+            height: 100vh;
+
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45)),
+                url("sahara.jpg");
+
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: white;
+            padding: 25px 9%;
+        }
+
+        .logo {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+        }
+
+        nav {
+            position: absolute;
+            top: 35px;
+            right: 9%;
+
+            display: flex;
+            align-items: center;
+            gap: 55px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+
+        .menu {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: #555;
+            font-size: 20px;
+        }
+
+        .content {
+            position: absolute;
+            left: 15%;
+            top: 50%;
+
+            transform: translateY(-35%);
+        }
+
+        .content h1 {
+            font-size: 100px;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            width: 570px;
+            font-size: 13px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .explore {
+            width: 195px;
+            height: 45px;
+
+            border: none;
+            border-radius: 25px;
+
+            background: white;
+            color: #555;
+
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .explore:hover {
+            background: #ddd;
+        }
+
+        .cards {
+            position: absolute;
+            right: 9%;
+            top: 50%;
+
+            transform: translateY(-45%);
+
+            display: grid;
+            grid-template-columns: repeat(2, 215px);
+            gap: 20px 35px;
+        }
+
+        .card {
+            height: 250px;
+            border-radius: 13px;
+
+            background-size: cover;
+            background-position: center;
+
+            position: relative;
+            overflow: hidden;
+
+            transition: 0.3s;
+        }
+
+        .card1 {
+            background-image: url(kalahari-desert-sunset-scaled.jpg);
+        }
+
+        .card2 {
+            background-image: url(piramida.png);
+        }
+
+        .card3 {
+            background-image: url(chol.png);
+        }
+
+        .card4 {
+            background-image: url(cool.png);
+        }
+
+        .card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom,
+                    rgba(0, 0, 0, 0.15),
+                    rgba(0, 0, 0, 0.35));
+        }
+
+        .card-text {
+            position: absolute;
+            z-index: 2;
+
+            top: 18px;
+            left: 20px;
+            right: 15px;
+        }
+
+        .card-text h3 {
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        .card-text p {
+            font-size: 9px;
+            line-height: 1.5;
+        }
+
+        .content {
+            left: 8%;
+        }
+
+        .content h1 {
+            font-size: 65px;
+        }
+
+        .content p {
+            width: 400px;
+        }
+
+        .cards {
+            right: 5%;
+            grid-template-columns: repeat(2, 160px);
+        }
+
+        .card {
+            height: 190px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <img src="tuya.png" class="logo">
+
+        <!-- MENU -->
+        <nav>
+            <a href="#">HOME</a>
+            <a href="#">REGION</a>
+            <a href="#">ABOUT</a>
+
+            <div class="menu">
+                ☰
+            </div>
+        </nav>
+
+
+        <div class="content">
+
+            <h1>Sahara</h1>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Nulla erat orci, pulvinar eget neque a, congue egestas odio.
+                Pellentesque rhoncus dui vitae odio maximus, in tempor urna pretium.
+            </p>
+
+            <button class="explore">
+                Explore
+            </button>
+
+        </div>
+
+
+
+        <div class="cards">
+
+            <div class="card card1">
+                <div class="card-text">
+                    <h3>Western Desert</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+
+            <div class="card card2">
+                <div class="card-text">
+                    <h3>Al Bagawat</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+
+            <div class="card card3">
+                <div class="card-text">
+                    <h3>Pyramid Of Giza</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+
+            <div class="card card4">
+                <div class="card-text">
+                    <h3>Kalahari Desert</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+</body>
+
+</html>
